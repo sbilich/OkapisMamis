@@ -1,4 +1,3 @@
-
 public class College {
     // Name of the college.
     private String name;
