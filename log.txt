@@ -4,7 +4,8 @@ Courtney Brown -
 
 
 Sarah Padlipsky -
-
+11-26: Find list of colleges and start inputting data - 2 hours
+11-27: Programmed the reading in of the data - 1 hour
 
 
 
