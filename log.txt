@@ -1,5 +1,5 @@
 Courtney Brown -
-11-27: Find data on bad colleges - 2 hours 
+11-27: Find data on bad colleges - 2 hours
 
 
 
@@ -15,3 +15,6 @@ Eva Bozich -
 
 
 Sara Bilich -
+11-28: Researched kmeans clustering algorithm and reviewed practice examples
+11-29: wrote kmeans clustering algorithm that would take in serialized input and
+        output clustering results.
