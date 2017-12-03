@@ -1,6 +1,6 @@
 Courtney Brown -
 11-27: Find data on bad colleges - 2 hours
-
+12-2: Implement evaluation methods for precision, recall, f-score and MAP-score to measure success of k-means clustering algorithm against human classification - 2 hours
 
 
 Sarah Padlipsky -
