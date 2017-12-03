@@ -65,7 +65,7 @@ public class Evaluator {
 		getStats(GOOD_COLLEGE_NAMES, goodColleges); 
 	}
 	
-	public void getStats(ArrayList<String> relevant, ArrayList<String> returned) {
+	public static void getStats(ArrayList<String> relevant, ArrayList<String> returned) {
 		double precision = calculatePrecision(relevant, returned); 
 		double recall = calculateRecall(relevant, returned); 
 
@@ -76,25 +76,25 @@ public class Evaluator {
 		System.out.println("MAP-Score: " + MAPScore(relevant, returned)); 
 	}
 	
-	public double calculatePrecision(ArrayList<String> relevant, ArrayList<String> returned) {
+	public static double calculatePrecision(ArrayList<String> relevant, ArrayList<String> returned) {
 		int numerator = returned.stream().filter(college -> relevant.contains(college)).toArray().length;  
 		int numReturned = returned.size(); 
 		return (double) numerator / numReturned;
 	}
 	
-	public double calculateRecall(ArrayList<String> relevant, ArrayList<String> returned) {
+	public static double calculateRecall(ArrayList<String> relevant, ArrayList<String> returned) {
 		int numerator = returned.stream().filter(college -> relevant.contains(college)).toArray().length;  
 		int numRelevant = relevant.size(); 
 		return (double) numerator / numRelevant;
 	}
 	
-	public double fScore(double precision, double recall) {
+	public static double fScore(double precision, double recall) {
 		double numerator = (1+Math.pow(b, 2)) * precision * recall; 
 		double denominator = ((Math.pow(b, 2)) * precision) + recall; 
 		return numerator / denominator; 
 	}
 	
-	public double MAPScore(ArrayList<String> relevant, ArrayList<String> returned) {
+	public static double MAPScore(ArrayList<String> relevant, ArrayList<String> returned) {
 		ArrayList<String> returnedLookedAt = new ArrayList<String>(); 
 		ArrayList<String> relevantLookedAt = new ArrayList<String>(); 
 		ArrayList<Double> precisionList = new ArrayList<Double>();
@@ -104,12 +104,14 @@ public class Evaluator {
 			if (relevant.contains(college)) {
 				relevantLookedAt.add(college); 
 				// calculate precision so far
-				precisionList.add(calculatePrecision(relevantLookedAt, returnedLookedAt)); 
+				double precision = calculatePrecision(relevantLookedAt, returnedLookedAt);  
+				precisionList.add(precision); 
 			}
 		}
 		
 		// divide by number of relevant colleges
-		return precisionList.stream().mapToDouble(d->d).sum() / relevantLookedAt.size(); 
+		double mapScore = precisionList.stream().mapToDouble(d->d).sum() / (double)relevant.size(); 
+		return mapScore;
 	}
 
 }
