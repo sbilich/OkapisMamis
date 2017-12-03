@@ -11,6 +11,8 @@ import java.io.*;
 public class Cluster {
 
   private static ArrayList<College> colleges;
+  
+
   private static final int NUM_CLUSTERS = 2;
 
   public static void main(String args[]) {
@@ -22,6 +24,7 @@ public class Cluster {
         KMeans.getKMeansClusters(colleges, NUM_CLUSTERS);
 
       printOutput(clusters);
+      printEvaluation(clusters);
   }
 
   private static void getSerializedColleges() {
@@ -43,5 +46,14 @@ public class Cluster {
       System.out.println(c+"\n");
       i++;
     }
+  }
+  
+  private static void printEvaluation(ArrayList<ArrayList<College>> clusters) {
+	 System.out.println(""); 
+	 System.out.println("Evaluation"); 
+	 System.out.println("---------------------------------");
+	 
+	 Evaluator evaluate = Evaluator.getInstance(clusters); 
+	 evaluate.printStats();
   }
 }
