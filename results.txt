@@ -1,5 +1,47 @@
 Description of the output:
-	<TODO>
+
+	The K-Means Clustering algorithm returns two clusters, one that is
+	comprised of presumably "good" colleges, and another that is 
+	presumably "bad" colleges. 
+
+	Using a list of relevant Good College Names, 
+	and a list of relevant Bad College Names, the Evaluator class
+	calculates the precision, recall, f-Score, and MAP-Score 
+	for the clusters that the KMeans Class returned. 
+
+
+	The results for the algorithms' clustering are listed below:
+
+	Evaluating Bad Colleges
+	Precision: 0.9166666666666666
+	Recall: 0.88
+	F-Score: 0.8979591836734694
+	MAP-Score: 0.8091917211951537
+
+
+	Evaluating Good Colleges
+	Precision: 0.9259259259259259
+	Recall: 0.9615384615384616
+	F-Score: 0.9433962264150944
+	MAP-Score: 0.9168205797870859
+
 
 Significance of the output:
-	<TODO>
+
+	Over multiple runs of our program, we get a few different versions of the
+	two final clusters, only differing by one element.
+ 
+	Our results show that our K-Means clustering algorithm had higher a precision,
+	recall, f-score, and MAP-score when evaluating the colleges labeled "good" than
+	the colleges labeled "bad". While slightly less accurate, the algorithm still
+	performed well when evaluating the "bad" colleges.
+
+	"Good" Colleges:
+	Precision = 93%, Recall: 96%, F-Score: 94%, MAP-Score: 92%.
+
+	"Bad" Colleges:
+	Precision = 92%, Recall: 88%, F-Score: 89%, and a MAP-Score: 81%.
+
+	Overall the K-Means clustering was an effective method for classifying
+	our input data into two categories, "good" and "bad". 
+

@@ -15,6 +15,7 @@ Eva Bozich -
 
 
 Sara Bilich -
-11-28: Researched kmeans clustering algorithm and reviewed practice examples
+11-28: Researched kmeans clustering algorithm and reviewed practice examples - 1 hour
 11-29: wrote kmeans clustering algorithm that would take in serialized input and
-        output clustering results.
+        output clustering results. - 3 hours
+12-3: Wrote description of algorithm and description of results, organized a google doc that		presents the findings from the project - 1 hour
