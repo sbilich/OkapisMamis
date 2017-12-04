@@ -1,5 +1,29 @@
-Algorithm Used:
+Algorithm Used: K-Means Clustering
 
-Description:
+Description: This algorithm takes in our college data and clusters the data entries
+		into two separate clusters.
 
-<write description of how algorithm works>
+The K-means clustering algorithm partitions the inputted data 
+into k clusters by doing the following:
+
+1) Randomly selects k data points (seeds) to be the initial centroids, cluster centers
+2) Assign each data point to the nearest centroid 
+3) Find the distance between each data point to each centroids
+   using the Euclidean distance formula
+4) Re-compute the centroids using the current cluster memberships
+5) If a convergence criterion* is not met, go back to 2)
+
+  * In our implementation, the convergence criterion is if the 
+    cluster memberships remain the same from one iteration to the next
+
+     Advantages to using K-means Clustering
+	- Easy to implement
+	- O(t*k*n), n is the number of data points, k is the number of 
+	  clusters, and t is the number of iterations
+	- K-means is considered a linear algorithm, since both k and t are small
+
+     Weaknesses of K-means
+	- Can only use k-means if the mean is defined
+	- The user only needs to specify k
+	- The algorithm is sensitive to outliers
+
