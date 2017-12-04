@@ -45,3 +45,14 @@ Significance of the output:
 	Overall the K-Means clustering was an effective method for classifying
 	our input data into two categories, "good" and "bad". 
 
+	These results are particularly interesting because by using a mix of colleges from 
+	all over the United States we clustered the colleges into two separate groups. As we
+	had predicted, the algorithm clustered the colleges into "good" and "bad" colleges.
+	We had added Cal Poly into the data because we were interested to see what group the
+	algorithm would cluster Cal Poly into. In every run of the program, Cal Poly was
+	clustered along with prestigous schools such as Yale, Harvard, UCLA, and Stanford. 
+	It was interesting to see how accuratley the algorithm could group the colleges and
+	make predictions on unseen data points.
+
+	* The list of "bad" colleges were found on:
+	https://washingtonmonthly.com/magazine/septoct-2014/americas-worst-colleges/ 
